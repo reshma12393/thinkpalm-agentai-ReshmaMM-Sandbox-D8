@@ -1,4 +1,4 @@
-# AI Root Cause Analysis Pipeline
+# AI Root Cause Analysis Agent
 
 A multi-agent system for automated root cause analysis (RCA) of logs and plans from the cargo planning assist application. This tool ingests unstructured logs or execution plans, maps them to known failure patterns, infers likely root causes, and generates actionable recommendations. It leverages a graph of agents (built with LangGraph and LangChain) working on a shared state to provide deep diagnostics and decision support.
 
