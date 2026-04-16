@@ -1,0 +1,101 @@
+2025-04-23 11:25:43.453 | INFO     | main:task_handler:398 - 5079f18a-94b9-4460-9015-068a859b5bb6: New task started
+2025-04-23 11:25:43.453 | INFO     | main:task_handler:399 - 5079f18a-94b9-4460-9015-068a859b5bb6: Get vessel API
+2025-04-23 11:25:44.730 | INFO     | main:task_handler:421 - 5079f18a-94b9-4460-9015-068a859b5bb6: Add new loadable
+auto mode!!!
+module LOADABLE AMPL 1  Threads:  8
+1
+https://mol-qa.cp-dss.com/cpdss/api/cloud/algo/vessel-details/1
+INFO:     10.0.1.181:56928 - "POST /new_loadable HTTP/1.1" 202 Accepted
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/fastapi/applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 56, in body_stream
+    task.result()
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 56, in body_stream
+    task.result()
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 56, in body_stream
+    task.result()
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/responses.py", line 142, in __call__
+    await self.background()
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/background.py", line 35, in __call__
+    await task()
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/background.py", line 20, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/ALGO/./algo_q/interceptor.py", line 25, in add_to_request_queue
+    create_queue(body, req, process_id)
+  File "/home/ubuntu/ALGO/./algo_q/operations.py", line 27, in create_queue
+    database.commit()
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1046, in commit
+    self.transaction.commit()
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 502, in commit
+    self._assert_active(prepared_ok=True)
+  File "/home/ubuntu/ALGO/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 289, in _assert_active
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "queue_detail_pkey"
+DETAIL:  Key (id)=(232) already exists.
+
+[SQL: INSERT INTO queue_detail (id, queue_id, input_json) VALUES (%(id)s, %(queue_id)s, %(input_json)s)]
+[parameters: {'id': 232, 'queue_id': 236, 'input_json': '{"body": {"module": "LOADABLE", "loadable": {"module": "LOADABLE", "id": 2875, "voyageId": 971, "voyageNo": "Queue 2304", "vesselId": 1, "name": "ls1 ... (9535817 characters truncated) ... "4P", "4S", "5P", "3P", "3S", "5S"], "fixLCG": false, "gurobi_options_threads": 8}}, "other_details": {"url": "http://10.0.1.127:8080/new_loadable"}}'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+INFO:     176.65.148.254:47684 - "GET /script HTTP/1.1" 404 Not Found

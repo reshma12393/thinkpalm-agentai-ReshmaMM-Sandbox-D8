@@ -4,8 +4,8 @@ A multi-agent system for automated root cause analysis (RCA) of logs and plans f
 
 > **Note:**  
 This RCA agent is tailored for use with the **CPDSS (Cargo Planning Decision Support System)** project, which produces cargo allocation plans and operational logs as part of its workflow.  
-- **Sample input logs and plans** for testing or demonstration are modelled after typical output from CPDSS, ensuring realistic scenarios for root cause analysis.  
-- The system is designed to understand and reason about failures or inefficiencies specifically within the context of vessel stowage, cargo allocation, and related decision support as found in CPDSS outputs.
+ **Sample input logs and plans** for testing or demonstration are modelled after typical output from CPDSS, ensuring realistic scenarios for root cause analysis.  
+ The system is designed to understand and reason about failures or inefficiencies specifically within the context of vessel stowage, cargo allocation, and related decision support as found in CPDSS outputs.
 
 
 ## Input / Output Expectations
@@ -250,6 +250,16 @@ curl -s -X POST http://127.0.0.1:8000/analyze \
 
 ---
 
+## Tests, documentation, and UI assets
+
+| Location | Contents |
+|----------|----------|
+| **`tests/`** | **Test data** — sample logs, plan JSON, and other inputs for manual or scripted testing (Streamlit upload, CLI `--file`, or `POST /analyze`). |
+| **`screenshots/`** | **UI screenshots** — captures of the Streamlit app and related views for documentation and demos. |
+| **`docs/`** | **Project overview** and supplemental docs — start with **`docs/overview.md`** for a concise pipeline and repository map. |
+
+---
+
 ## Project layout
 
 ```text
@@ -262,6 +272,9 @@ rca-agent/
     tools/         # Helpers
     utils/         # config, LLM, parsers
     ui/            # CLI + Streamlit
+  tests/           # Sample / test inputs (see table above)
+  screenshots/     # UI screenshots (see table above)
+  docs/            # Overview and extra documentation (see table above)
   main.py          # CLI entry + ASGI app export for uvicorn
   pyproject.toml
   requirements.txt
